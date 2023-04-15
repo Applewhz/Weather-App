@@ -29,9 +29,10 @@ const weatherReducer = (state = initialState, action) => {
                 error: action.payload,
             };
         case weatherActionType.REMOVE_SELECTED_SEARCHED_HISTORY_ENTRY:
-            state.currentSearchCountry.fliter(item => item.id !== action.payload)
+            const updatedHistory = state.searchCountryHistory.filter(item => item.id !== action.payload.data)
             return {
                 ...state,
+                searchCountryHistory: updatedHistory
             };
         default:
             return {

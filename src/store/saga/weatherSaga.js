@@ -16,7 +16,7 @@ function* getSelectedCountryWeatherGenerator({payload}) {
 
 const getSelectedCountryWeather = async ( countryName ) => {
     return (
-        // get weather data from api
+        // get weather data from api with user input country name
         axiosInstance.get(`/data/2.5/weather?q=${countryName}&appid=e984e3a9177dc933b34832013058d1bd&units=metric`)
     );
 };

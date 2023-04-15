@@ -1,27 +1,29 @@
-
 import SearchBar from "../components/SearchBar/SearchBar";
 import DisplayCurrentWeather from "../components/DisplayCurrentWeather/DisplayCurrentWeather";
+import { useSelector } from "react-redux";
 import './WeatherPage.css';
-// import { useEffect } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import weatherAction from "../store/actions/weatherActions";
-const WeatherPage = () => {
-    // const dispatch = useDispatch()
+import { useEffect, useState } from "react";
 
-    // useEffect(() => {
-    //     dispatch(weatherAction.getSelectedCountryWeather('Singapore'))
-    // },[])
+const WeatherPage = () => {
+    const error = useSelector((state) => state.countryWeather.error)
     
-    // const data = useSelector((state) => state.countryWeather.currentSearchCountry)
-    // if (data === undefined) {
-    //     return (
-    //         <div><p>Still loading...</p></div>)
-    // }
-    // console.log('here?',data)
+    const [showErrorMessage, setShowErrorMessage] = useState(false);
+
+    useEffect(() => {
+        setShowErrorMessage(true)
+        setTimeout(() => {
+            setShowErrorMessage(false);
+        }, 3000);
+    },[error])
 
     return (
         <div className="WeatherPage">
             <SearchBar />
+            {showErrorMessage ? 
+                <div>
+                    <h4 style={{padding: '3px', color: 'maroon'}}>Country/City Entered is not found! Please try again!</h4> 
+                </div>
+            : null}
             <DisplayCurrentWeather />
         </div>
     )

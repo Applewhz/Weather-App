@@ -1,18 +1,17 @@
 .SearchHistoryOverview {
-    /* border: 2px solid red; */
     display: flex;
-    max-width: 90%;
-    height: 100%;
+    width: 38rem;
+    height: 50rem;
     border-radius: 25px;
     background-color: rgba(255,255,255,0.2);
     align-self: center;
     align-items: center;
     flex-direction: column;
     padding-bottom: 30px;
+    overflow: scroll;
 }
 
 h4{
-    /* border: 2px solid red; */
     align-self: start;
     padding-left: 26px;
 }

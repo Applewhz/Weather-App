@@ -2,17 +2,17 @@ import { HistoryCard } from "../HistoryCard/HistoryCard"
 import { useSelector } from "react-redux";
 import './SearchHistoryTable.css';
 
-const SearchHistoryTable = (props) => {
+const SearchHistoryTable = () => {
 
-    // const data = props.historyData
     const searchHistory = useSelector((state) => state.countryWeather.searchCountryHistory)
-    console.log(searchHistory)
+
     const renderHistoryCard = (dataForHistory) => {
         if(dataForHistory.length > 0){
             return (
-                dataForHistory.map((data, key) => 
-                <div key={key}>
+                dataForHistory.map((data) => 
+                <div key={data.id}>
                     <HistoryCard 
+                        id={data.id}
                         countryName={data.countryName} 
                         time={data.time} 
                         date={data.date}
