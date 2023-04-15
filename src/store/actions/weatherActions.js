@@ -22,7 +22,14 @@ const weatherAction = {
             error,
             status
         }
-    })
+    }),
+
+    removeSelectedSearchedHistoryEntry: (data) => ({
+        type: weatherActionType.REMOVE_SELECTED_SEARCHED_HISTORY_ENTRY,
+        payload: {
+            data
+        }
+    }),
 
 }
 
