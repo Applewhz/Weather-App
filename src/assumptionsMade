@@ -1,0 +1,7 @@
+Assumptions made about the test
+
+1. Web App and Search History is scrollable 
+2. Increased font sizes of some texts as after applying the ones stated in figma, it looked abit small 
+and might affect user experience
+3. Added some button animation for better user experience
+4. Implemented redux store for future developement 
