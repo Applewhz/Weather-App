@@ -1,9 +1,10 @@
 import React from 'react';
+import WeatherPage from './page/WeatherPage';
 
 function App() {
   return (
-    <h1>Hello world!</h1>
-  );
+    <WeatherPage />
+  )
 }
 
 export default App;

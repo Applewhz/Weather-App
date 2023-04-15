@@ -1,0 +1,59 @@
+.DisplayCurrentWeather {
+    border: 2px solid blue;
+    background-color: rgba(255,255,255,0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 35px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* justify-items: center; */
+    min-width: 45%;
+    /* TODO dynamic height */
+    min-height: 100%; 
+    margin-top: 110px;
+    margin-bottom: 20px;
+
+
+}
+p{
+    margin: 0;
+    /* margin-bottom: 10px; */
+    font-size: 18px; /* Changed to 18px instead of 14px radius from figma */
+    font-weight: 400;
+}
+h1{
+    color: #6C40B5;
+    fill: #6C40B5;
+    font-size: 4rem;
+    margin: 0;
+    margin-bottom: 15px;
+}
+.HeaderWeatherInfomation{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 180px;
+    /* border: 2px solid red; */
+    margin-bottom: 0;
+
+}
+.localCountryInformationBar{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    align-self: center;
+    margin-bottom: 26px;
+}
+
+.WeatherIcon{
+    height: 250px;
+    /* border: 2px solid green; */
+    /* justify-self: start; */
+    /* position: sticky; */
+    transform: translate(-3%, -30%);
+}

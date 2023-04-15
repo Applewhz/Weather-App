@@ -1,0 +1,19 @@
+button {
+    /* color: black; */
+    padding: 7px 50px 7px 50px;
+    text-align: center;
+    font-size: 15px;
+    background-color: white;
+    border: 3px solid purple; 
+  }
+  
+  button:active {
+    background-color: grey;
+  }
+.buttonContainer:hover {background-color: #3e8e41}
+
+.buttonContainer:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
